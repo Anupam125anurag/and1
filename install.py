@@ -25,4 +25,4 @@ os.popen("adb shell dmesg >kernel3log.txt")
 print("hello CTS")
 
 #run cts
-#os.system("sudo/home/sushma/Downloads/android-cts/tools/cts-tradefed run cts")
+os.system("sudo/home/sushma/Downloads/android-cts/tools/cts-tradefed run cts")
