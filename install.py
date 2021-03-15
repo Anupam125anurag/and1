@@ -13,7 +13,7 @@ connect = os.popen("adb connect "+device).read()
 #print(connect)
 
 # gradle build apk and install apk
-os.system("echo  |sudo -S ./gradlew installDebug")
+os.system("echo  |sudo -S ./gradlew clean installDebug")
 
 #testing and collecting logcat
 
@@ -24,7 +24,7 @@ os.system("adb logcat > test11log.txt")
 time.sleep((1000*100)/1000)
 
 #kernel log
-os.popen("adb shell dmesg >kernel3log.txt")
+#os.popen("adb shell dmesg >kernel3log.txt")
 print("hello CTS")
 
 #run cts
