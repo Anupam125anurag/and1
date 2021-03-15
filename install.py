@@ -17,8 +17,11 @@ os.system("echo  |sudo -S ./gradlew installDebug")
 
 #testing and collecting logcat
 
-os.system("adb shell monkey -v --throttle 100 -p com.example.myapplication_jenkins 1000 > test11log.txt")
-time.sleep((1000*100)/1000)
+os.system("adb shell monkey -v --throttle 100 -p com.example.myapplication_jenkins 1000")
+os.system("adb logcat > test11log.txt")
+
+
+#time.sleep((1000*100)/1000)
 
 #kernel log
 os.popen("adb shell dmesg >kernel3log.txt")
