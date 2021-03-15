@@ -21,7 +21,7 @@ os.system("adb shell monkey -v --throttle 100 -p com.example.myapplication_jenki
 os.system("adb logcat > test11log.txt")
 
 
-#time.sleep((1000*100)/1000)
+time.sleep((1000*100)/1000)
 
 #kernel log
 os.popen("adb shell dmesg >kernel3log.txt")
