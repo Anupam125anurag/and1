@@ -13,15 +13,15 @@ connect = os.popen("adb connect "+device).read()
 #print(connect)
 
 # gradle build apk and install apk
-os.system("echo  |sudo -S ./gradlew clean installDebug")
+os.system("./gradlew clean installDebug")
 
 #testing and collecting logcat
 
-os.system("adb shell monkey -v --throttle 100 -p com.example.myapplication_jenkins 1000")
-os.system("adb logcat > test11log.txt")
+os.system("adb shell monkey -p com.example.myapplication_jenkins -v 500 2")
+#os.system("adb logcat > test11log.txt")
 
 
-time.sleep((1000*100)/1000)
+#time.sleep((1000*100)/1000)
 
 #kernel log
 #os.popen("adb shell dmesg >kernel3log.txt")
